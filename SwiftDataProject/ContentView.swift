@@ -10,15 +10,14 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
+    @State private var showingUpcomingOnly = false
     @Query(filter: #Predicate<User> { user in
         user.name.contains("R")
     }, sort: \User.name) var users: [User]
     
     var body: some View {
         NavigationStack {
-            List(users) { user in
-                Text(user.name)
-            }
+            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast)
             .navigationTitle("Users")
             .toolbar {
                 Button("Add Samples", systemImage: "plus") {
@@ -32,6 +31,10 @@ struct ContentView: View {
                     modelContext.insert(second)
                     modelContext.insert(third)
                     modelContext.insert(fourth)
+                }
+                
+                Button(showingUpcomingOnly ? "Show Everyone" : "Show upcoming") {
+                    showingUpcomingOnly.toggle()
                 }
             }
         }
