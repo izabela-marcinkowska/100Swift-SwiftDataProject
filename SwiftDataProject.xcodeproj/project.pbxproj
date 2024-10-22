@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		17BB62C22CC7A63600F50BF7 /* RelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB62C12CC7A63600F50BF7 /* RelationshipView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1724ED922CC43278006F1C92 /* SwiftDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BB62C12CC7A63600F50BF7 /* RelationshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		1724ED892CC43278006F1C92 = {
 			isa = PBXGroup;
 			children = (
+				17BB62C12CC7A63600F50BF7 /* RelationshipView.swift */,
 				1724ED942CC43278006F1C92 /* SwiftDataProject */,
 				1724ED932CC43278006F1C92 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BB62C22CC7A63600F50BF7 /* RelationshipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
